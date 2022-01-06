@@ -7,8 +7,9 @@ import { TodoModule } from './todo/todo.module';
   imports: [
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
-      `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@todoapp.g6vho.mongodb.net/test`,
+      `mongodb+srv://sinonsrt:${process.env.DATABASE_PASSWORD}@todoapp.g6vho.mongodb.net/test`,
     ),
+
     TodoModule,
   ],
   controllers: [],
