@@ -14,7 +14,7 @@ export class TodoService {
   }
 
   findAll() {
-    return this.todoModel.find();
+    return this.todoModel.find().where('deleted_at', null);
   }
 
   findOne(id: string) {

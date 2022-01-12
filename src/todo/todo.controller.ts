@@ -43,7 +43,7 @@ export class TodoController {
   })
   @ApiResponse({ status: 400, description: 'Pâmetros inválidos' })
   findAll() {
-    return this.todoService.findAll().where('deleted_at', null);
+    return this.todoService.findAll();
   }
 
   @Get(':id')
@@ -80,7 +80,6 @@ export class TodoController {
     description: 'Pâmetros inválidos - Não encontrado',
   })
   remove(@Param('id') id: string) {
-    console.log(id);
     return this.todoService.remove(id);
   }
 }
